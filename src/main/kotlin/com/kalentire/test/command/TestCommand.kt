@@ -35,7 +35,6 @@ class TestCommand(plugin: RavinPlugin) : BaseCommand(plugin, "test", null) {
 
             if(sender is Player) {
                 // do player things.
-                sender.teleport(args[0])
             }
             plugin.reload()
             sender.sendMessage("Plugin reloaded successfully!")
