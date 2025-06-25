@@ -68,18 +68,18 @@ tasks {
     }
 
     jar {
-        archiveFileName.set("$name-parent.jar")
-        archiveBaseName.set("$name-parent")
+        archiveFileName.set("${project.name}-parent.jar")
+        archiveBaseName.set("${project.name}-parent")
         archiveVersion.set(null as String?)
         archiveClassifier.set("original")
     }
 
     shadowJar {
-        archiveFileName.set("$name.jar")
-        archiveBaseName.set(name)
+        archiveFileName.set("${project.name}.jar")
+        archiveBaseName.set(project.name)
         archiveVersion.set(null as String?)
         archiveClassifier.set("")
-        relocate("com.ravingarinc.api", "$group.libs.api")
+        relocate("com.ravingarinc.api", "${project.group}.libs.api")
     }
 
 
